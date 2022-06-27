@@ -4,10 +4,7 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 let obj = "";
-
 app.post("/", (req, res) => {
-  console.log(req.body.message.content.text);
-  // axios.get()
   obj = req.body.message.content.text;
   res.send({ name: obj });
 });
